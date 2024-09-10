@@ -1,0 +1,24 @@
+datasource:
+  friend:
+    shards:
+      - username: username
+        password: password
+        master:
+          name: master-friend
+          url: url
+        slaves:
+          - name: slave-friend-1
+            url: url
+      - username: username
+        password: password
+        master:
+          name: master-friend
+          url: url
+        slaves:
+          - name: slave-friend-1
+            url: url
+
+sharding:
+  friend:
+    strategy: MODULAR
+    mod: 2
