@@ -11,6 +11,10 @@ public class UserHolder {
 		getUserContext().setSharding(new Sharding(target, shardKey));
 	}
 
+	public static void clearSharding() {
+		getUserContext().setSharding(null);
+	}
+
 	public static Sharding getSharding() {
 		return getUserContext().getSharding();
 	}
