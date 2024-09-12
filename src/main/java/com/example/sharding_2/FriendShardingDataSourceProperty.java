@@ -6,11 +6,11 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 
 @Getter
 @ConfigurationProperties("datasource.friend")
-public class ShardingDataSourceProperty {
+public class FriendShardingDataSourceProperty {
 
 	private final List<Shard> shards;
 
-	public ShardingDataSourceProperty(List<Shard> shards) {
+	public FriendShardingDataSourceProperty(List<Shard> shards) {
 		this.shards = shards;
 	}
 
