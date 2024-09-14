@@ -1,7 +1,9 @@
-package com.example.sharding_2;
+package com.example.sharding_2.config;
 
 import static com.example.sharding_2.ShardConstants.*;
 
+import com.example.sharding_2.DataSourceRouter;
+import com.example.sharding_2.FriendShardingDataSourceProperty;
 import com.example.sharding_2.FriendShardingDataSourceProperty.Property;
 import com.example.sharding_2.FriendShardingDataSourceProperty.Shard;
 import com.zaxxer.hikari.HikariConfig;
@@ -16,11 +18,11 @@ import org.springframework.jdbc.datasource.LazyConnectionDataSourceProxy;
 
 @Configuration
 @EnableConfigurationProperties(FriendShardingDataSourceProperty.class)
-public class FriendConfig {
+public class WonderCardsConfig {
 
 	private final FriendShardingDataSourceProperty property;
 
-	public FriendConfig(FriendShardingDataSourceProperty property) {
+	public WonderCardsConfig(FriendShardingDataSourceProperty property) {
 		this.property = property;
 	}
 
